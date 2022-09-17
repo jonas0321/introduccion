@@ -121,52 +121,83 @@
 //     }
 //     document.write(resultado)
 // }
-
-// const sumar = (num1, num2)=>{
+// class Calculadora{
+//  sumar  (num1, num2){
 //     return parseInt(num1) + parseInt(num2)
 // }
 
-// const restar = (num1, num2)=>{
+//  restar  (num1, num2){
 //     return parseInt(num1) - parseInt(num2)
 // }
 
-// const multiplicar = (num1, num2)=>{
+//  multiplicar  (num1, num2){
 //     return parseInt(num1) * parseInt(num2)
 // }
 
-// const dividir = (num1, num2)=>{
+//  dividir (num1, num2){
 //     return parseInt(num1) / parseInt(num2)
 // }
+//  potenciar(num,exp){
+//     return num**exp
+//  }
+//  raizCuadrada (num){
+//     return Math.sqrt(num)
+//  }
+//  raizCubica (num){
+//     return Math.cbrt(num)
+//  }
+// }
+
+// const calculadora = new Calculadora();
 
 // alert('que operacion deseas realizar?');
-// operacion = prompt(`1:suma 2: resta  3: multiplicacion 4: division`)
+// operacion = prompt(`1:suma 2: resta  3: multiplicacion 4: division 5: potenciacion 6: raiz cuadrada 7: raiz cubica`)
 
 // if ( operacion == 1){
 //     let numero1 = prompt('ingrese el primer numero')
 
 //     let numero2 = prompt('ingrese el segundo numero')
-//     resultado = sumar(numero1,numero2);
+//     resultado = calculadora.sumar(numero1,numero2);
 //     alert(`tu resultado es ${resultado}`)
 // }
 // else if (operacion == 2){
 //     let numero3 = prompt('ingrese el primer numero')
 
 //     let numero4 = prompt('ingrese el segundo numero')
-//     resultado = restar(numero3,numero4);
+//     resultado = calculadora.restar(numero3,numero4);
 //     alert(`tu resultado es ${resultado}`)
 // }
 // else if (operacion == 3){
 //     let numero5 = prompt('ingrese el primer numero')
 
 //     let numero6 = prompt('ingrese el segundo numero')
-//     resultado = multiplicar(numero5,numero6);
+//     resultado = calculadora.multiplicar(numero5,numero6);
 //     alert(`tu resultado es ${resultado}`)
 // }
 // else if (operacion == 4){
 //     let numero7 = prompt('ingrese el primer numero')
 
 //     let numero8 = prompt('ingrese el segundo numero')
-//     resultado = dividir(numero7,numero8);
+//     resultado = calculadora.dividir(numero7,numero8);
+//     alert(`tu resultado es ${resultado}`)
+// }
+// else if (operacion == 5){
+//     let numero9 = prompt('ingrese el primer numero')
+
+//     let exponente = prompt('ingrese el exponente')
+//     resultado = calculadora.potenciar(numero9,exponente);
+//     alert(`tu resultado es ${resultado}`)
+// }
+// else if (operacion == 6){
+//     let numero10 = prompt('ingrese el numero')
+
+//     resultado = calculadora.raizCuadrada(numero10);
+//     alert(`tu resultado es ${resultado}`)
+// }
+// else if (operacion == 7){
+//     let numero11 = prompt('ingrese el numero')
+
+//     resultado = calculadora.raizCubica(numero11);
 //     alert(`tu resultado es ${resultado}`)
 // }
 // else {
@@ -255,72 +286,169 @@
 
 // `)
 
-class App{
-    constructor(descargas, puntuacion, peso){
-        this.descargas = descargas,
-        this.puntuacion = puntuacion,
-        this.peso = peso,
-        this.iniciada = false,
-        this.instalada = false;
-    }
-    instalar(){
-        if (this.instalada == false){
-            this.instalada = true;
-            alert('app instalada correctamente')
-        }
-    }
-    desinstalar(){
-        if (this.instalada == true){
-            this.instalada = false;
-            alert('app desinstalada correctamente')
-        }
-    }
-    abrir(){
-        if (this.iniciada == false && this.instalada==true){
-            this.iniciada = true
-            alert ('app iniciada')
-        }
-    }
-    cerrar(){
-        if (this.iniciada == true && this.instalada==true){
-            this.iniciada = false
-            if (this.instalada == true){
-                alert ('app cerrada')
-            } else {
-                'ha ocurrido un error'
-            }
-        }
-    }
-    appInfo(){
-       return `
-       Descargas: <b>${this.descargas}</b><br/>
-       Puntuacion: <b>${this.puntuacion}</b><br/>
-       Peso: <b>${this.peso}</b><br/>
+// class App{
+//     constructor(descargas, puntuacion, peso){
+//         this.descargas = descargas,
+//         this.puntuacion = puntuacion,
+//         this.peso = peso,
+//         this.iniciada = false,
+//         this.instalada = false;
+//     }
+//     instalar(){
+//         if (this.instalada == false){
+//             this.instalada = true;
+//             alert('app instalada correctamente')
+//         }
+//     }
+//     desinstalar(){
+//         if (this.instalada == true){
+//             this.instalada = false;
+//             alert('app desinstalada correctamente')
+//         }
+//     }
+//     abrir(){
+//         if (this.iniciada == false && this.instalada==true){
+//             this.iniciada = true
+//             alert ('app iniciada')
+//         }
+//     }
+//     cerrar(){
+//         if (this.iniciada == true && this.instalada==true){
+//             this.iniciada = false
+//             if (this.instalada == true){
+//                 alert ('app cerrada')
+//             } else {
+//                 'ha ocurrido un error'
+//             }
+//         }
+//     }
+//     appInfo(){
+//        return `
+//        Descargas: <b>${this.descargas}</b><br/>
+//        Puntuacion: <b>${this.puntuacion}</b><br/>
+//        Peso: <b>${this.peso}</b><br/>
 
-       `
+//        `
+//     }
+// }
+
+// app1 = new App("10.000", "5 estrellas", "900mb")
+// app2 = new App("18.000", "4 estrellas", "400mb")
+// app3 = new App("12.000", "3 estrellas", "700mb")
+// app4 = new App("13.000", "4.5 estrellas", "500mb")
+// app5 = new App("11.000", "3.5 estrellas", "600mb")
+// app6 = new App("13.000", "2 estrellas", "500mb")
+// app7 = new App("15.000", "1.9 estrellas", "200mb")
+
+
+// app1.instalar();
+// app1.abrir();
+// app1.cerrar();
+// app1.desinstalar();
+
+// document.write(`
+// ${app1.appInfo()}<br><br>
+// ${app2.appInfo()}<br><br>
+// ${app3.appInfo()}<br><br>
+// ${app4.appInfo()}<br><br>
+// ${app5.appInfo()}<br><br>
+// ${app6.appInfo()}<br><br>
+// ${app7.appInfo()}<br><br>
+// `)
+
+// const obtenerInformacion = (materia)=>{
+//    const materias = {
+//         fisica:["perez","pedro","pepito","cofla","maria"],
+//         programacion:["dalto","pedro", "juan", "pepito","maria"],
+//         logica:["hernandez","pedro", "juan", "pepito","cofla",],
+//         quimica:[, "rodriguez","juan", "pepito","cofla","maria"],
+//     }
+//     if(materias[materia] !== undefined){
+//         return [materias[materia],materia,materias]
+//     } return materias
+// }
+
+// const mostrarInformacion = (materia) =>{
+//     let informacion = obtenerInformacion(materia)
+
+// if (informacion !== false){
+//     let profesor = informacion[0][0]
+//     let alumnos = informacion[0]
+//     alumnos.shift()
+//     document.write(`el profesor de <b> ${informacion[1]}</b> es: <b style="color:red">${profesor}</b><br> los alumnos son: <b style="color:blue">${alumnos}</b><br><br> `)
+// }
+// }
+
+// const cantidadDeClases = (alumno)=>{
+//     let informacion = obtenerInformacion()
+//     let clasesPresentes =[]
+//     let cantidadTotal= 0
+//     for(info in informacion){
+//         if (informacion[info].includes(alumno)){
+//             cantidadTotal++
+//             clasesPresentes.push(" " + info)
+//         }
+//     }
+//     return `<b style= 'color:blue'> ${alumno}</b> esta en <b>${cantidadTotal}</b> clases: <b style= 'color:green'> ${clasesPresentes}</b> <br><br>`
+// }
+
+// mostrarInformacion("fisica")
+// mostrarInformacion("programacion")
+// mostrarInformacion("logica")
+// mostrarInformacion("quimica")
+
+// document.write(cantidadDeClases("cofla"))
+
+let materias = {
+            fisica:["perez","pedro","pepito","cofla","maria"],
+            programacion:["dalto","pedro", "juan", "pepito","maria"],
+            logica:["hernandez","pedro", "juan", "pepito","cofla",],
+            quimica:[, "rodriguez","juan", "pepito","cofla","maria"],
     }
+
+let inscribir = (alumno, materia)=>{
+    personas = materias[materia]
+    
+
+    if (personas.length >=21){
+        document.write(`lo siento ${alumno}, las clases de ${materia} ya estan llenas` )
+    }else {
+        personas.push(alumno)
+        if (materia == "fisica"){
+            materias = {
+                fisica: personas,
+                programacion: materias['programacion'],
+                logica: materias["logica"],
+                quimica: materias["quimica"]
+               
+        }
+    }
+        else if (materia == "programacion"){
+            materias = {
+                fisica: materias["fisica"],
+                programacion: personas,
+                logica: materias["logica"],
+                quimica: materias["quimica"],
+        }
+    }
+        else if (materia == "logica"){
+         materias = {
+            fisica: materias["fisica"],
+            programacion: materias["programacion"],
+            logica: personas,
+            quimica: materias["quimica"],
+        }
+    }
+        else if (materia == "quimica"){
+    const materias = {
+        fisica: materias["fisica"],
+        programacion: materias["programacion"],
+        logica: materias["logica"],
+        quimica: personas,
+        }
+    }
+    document.write(`felicidades ${alumno}! te has inscrito a ${materia} correctamente`)
+  }
 }
 
-app1 = new App("10.000", "5 estrellas", "900mb")
-app2 = new App("18.000", "4 estrellas", "400mb")
-app3 = new App("12.000", "3 estrellas", "700mb")
-app4 = new App("13.000", "4.5 estrellas", "500mb")
-app5 = new App("11.000", "3.5 estrellas", "600mb")
-app6 = new App("13.000", "2 estrellas", "500mb")
-app7 = new App("15.000", "1.9 estrellas", "200mb")
-
-
-app.instalar()
-app.abrir()
-app.cerrar()
-app.desinstalar()
-
-document.write(`
-${app1.appInfo()}<br><br>
-${app2.appInfo()}<br><br>
-${app3.appInfo()}<br><br>
-${app4.appInfo()}<br><br>
-${app5.appInfo()}<br><br>
-${app6.appInfo()}<br><br>
-${app7.appInfo()}<br><br>
-`)
+inscribir("pedro","fisica")

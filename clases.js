@@ -75,43 +75,74 @@
 
 // //Programcion orienta a objetos
 
-class animal{
-    constructor (especie, edad, color){
-        this.especie = especie
-        this.edad = edad
-        this.color = color
-        this.info = `soy ${this.especie}, tengo ${this.edad} years y soy de color ${this.color}`
-    }
-    verInfo(){
-        document.write(this.info + "<br>")
-    }
-}
+// class animal{
+//     constructor (especie, edad, color){
+//         this.especie = especie
+//         this.edad = edad
+//         this.color = color
+//         this.info = `soy ${this.especie}, tengo ${this.edad} years y soy de color ${this.color}`
+//     }
+//     verInfo(){
+//         document.write(this.info + "<br>")
+//     }
+// }
 
-class Perro extends animal {
-    constructor(especie,edad,color, raza){
-        super (especie,edad,color)
-        this.raza = null
-    }
-    set modificarRaza(newName){
-        this.raza = newName
-    }
+// class Perro extends animal {
+//     constructor(especie,edad,color, raza){
+//         super (especie,edad,color)
+//         this.raza = null
+//     }
+//     set modificarRaza(newName){
+//         this.raza = newName
+//     }
 
-    get getRaza () {
-        return this.raza
-    }
+//     get getRaza () {
+//         return this.raza
+//     }
 
 
-}
-const perro = new Perro('perro', 5, 'marron');
-const gato = new animal('perro', 2, 'negro');
-const pajaro = new animal('pajaro', 1, 'verde');
+// }
+// const perro = new Perro('perro', 5, 'marron');
+// const gato = new animal('perro', 2, 'negro');
+// const pajaro = new animal('pajaro', 1, 'verde');
 
 // perro.verInfo()
 // gato.verInfo()
 // pajaro.verInfo()
 
-perro.modificarRaza = "lobo"
+// perro.modificarRaza = "lobo"
 
-document.write(perro.raza) //set
-document.write(perro.getRaza) //get
+// document.write(perro.raza) //set
+// document.write(perro.getRaza) //get
 
+// metodo string
+//startswith si empieza por la misma palabra
+// endsWith lo mismo pero con la ultima 
+//cadena.sw()
+
+//includes para ver si una palabra esta en la cadena
+
+// indexOf no dice donde comienza la palabra
+
+// lastindexof lo mismo pero la ultimo
+
+//cadena.padStart(41,"hola ") and padend
+// split (",")
+//substring(0,2) nos muestra las letras
+
+// toLowerCase convierte minuscula
+// toUppercase 
+
+//tostring convierte a string un numero
+// trim triemstar trimend quitan espacion en blanco
+
+// // metodo arrays 
+
+// pop elimina el ultimo elemento y lo muestra
+// shift elimina el primero
+//push 
+//reverse invierte el nombre
+//unshift agrega al principio
+// sort ordena alfabeticamente
+//splice (0,4,"agrega")
+// join covierte en cadena de texto
